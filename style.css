@@ -1,0 +1,119 @@
+:root{
+    --bg-main: #0a1128;
+    --bg-card: #1c2541;
+    --input-card:#0a1128;
+    -accent:#d4af37;
+    --accent-hovar:#b89628;
+    --text-primary: #ffffff;
+    --text-secondary: #8d99ae;
+    --border-color:#2b3a67;
+    --danger:#991b1b;
+    --success:#10b981;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'segoe UI',system-ui,-apple-sytem,sans-serif;
+}
+body{
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100dvh;
+}
+.hidden{
+    display: none !important;
+}
+.auth-wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center,#1c2541 0%,var(--bg-main) 70%);
+}
+#login-form{
+    background: #151c2c;
+    border:1px solid black;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+}
+.logo{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.clg-logo{
+    font-size: 2rem;
+}
+.logo h1{
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+}
+.logo p{
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+.input-group{
+    margin-bottom: 1.3rem;
+}
+.input-group label{
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.input-group input{
+    width: 100%;
+    padding: 0.75px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+.input-group input:focus{
+    border-color: var(--accent);
+}
+.primary-btn{
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease;
+}
+.primary-btn:hover{
+    background: var(--accent-hovar);
+}
+.alert-box{
+    padding: 0.75px;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.card-footer{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color:var(--text-secondary);
+}
+.clg-logo-img{
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}

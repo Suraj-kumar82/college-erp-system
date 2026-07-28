@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRGC ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Authentication Gateway -->
+     <section id="auth-section" class="auth-wrapper">
+        <div class="login-card">
+
+
+            <!-- logo & heading -->
+            <div class="logo">
+                <img src="image.png" alt="SRGC LOGO" class="clg-logo-img">
+                <h1>SRGC ERP</h1>
+                <p>Shree Ram Group Of Colleges Portal</p>
+            </div>
+
+    
+            <!-- Login form -->
+             <form id="login-form">
+                <div class="input-group">
+                    <label for="user-email">Email</label>
+                    <input type="email"
+                           id="user-email"
+                           placeholder="example@student.srgc.edu"
+                           required
+                           autocomplete="off" 
+                    >
+                </div>
+                <div class="input-group">
+                    <label for="user-password">Password</label>
+                    <input type="password"
+                           id="user-password"
+                           placeholder="********"
+                           required 
+                    >
+                </div>
+
+                    <!-- Error/succes Message Box -->
+                     <div id="alert" class="alert-box hidden"></div>
+                     <button type="submit" id="login-btn" class="primary-btn">Authenticate</button>
+             </form>
+
+             <div class="card-footer">Authorized Personal only</div>
+
+        </div>
+     </section>
+     <script src="script.js"></script>
+</body>
+</html>
