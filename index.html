@@ -50,6 +50,50 @@
 
         </div>
      </section>
-     <script src="script.js"></script>
+
+    <!-- STUDENT DASHBOARD VIEW -->
+    <section id="student-dashboard" class="view hidden">
+
+        <!-- LEFT NAVIGATION SIDE BAR -->
+         <aside class="sidebar">
+            <div class="logo">SRGC ERP</div>
+            <UL class="nav-links">
+                <li class="active"><a href="#">DASHBOARD</a></li>
+                <li><a href="#">ATTENDANCE</a></li>
+                <li><a href="#">MARKS & GRADES</a></li>
+                <li><a href="#">FEES STRUCTURE</a></li>
+                <li><a href="#">PROFILES</a></li>
+            </UL>
+         </aside>
+         
+         <!-- RIGHT MAIN DISPLAY AREA -->
+         <main class="main-content">
+            <!-- TOP HAEDER BAR -->
+             <header class="top-header">
+                <h3>Welcome, <span id="student-name">Student</span>!</h3>
+                <button id="logout-btn" class="btn-logout">LOGOUT</button>
+             </header>
+            <!-- STATS CARD CONTAINER -->
+             <div class="dashboar-cards">
+                <div class="card">
+                    <h4>ATTENDANCE</h4>
+                    <p class="stat">85%</p>
+                </div>
+                <div class="card">
+                    <h4>CURRENT CGPA</h4>
+                    <p class="stat">8.5</p>
+                </div>
+                <div class="card">
+                    <h4>PENDING FEE</h4>
+                    <p class="card">&#8377;0</p>
+                </div>
+             </div>
+         </main> 
+    </section>
+    <!-- FACULTY DASHBOARD VIEW -->
+    <section id="faculty-dashboard" class="view hidden"></section>
+    <!-- ADMIN DASHBOARD VIEW -->
+    <section id="admin-dashboard" class="view hidden"></section>
+    <script src="script.js"></script>
 </body>
 </html>
