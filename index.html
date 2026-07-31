@@ -27,7 +27,7 @@
                     <label for="user-email">Email</label>
                     <input type="email"
                            id="user-email"
-                           placeholder="example@student.srgc.edu"
+                           placeholder="example@XYZ.edu"
                            required
                            autocomplete="off" 
                     >
@@ -56,13 +56,16 @@
 
         <!-- LEFT NAVIGATION SIDE BAR -->
          <aside class="sidebar">
-            <div class="logo">SRGC ERP</div>
+            <div class="logo" style="display:flex; align-items: center;gap: 10px; ">
+                <img src="image.png" alt="logo" style="width: 35px; height: 35px;object-fit: contain;">
+                <span>SRGC ERP</span>
+            </div>
             <UL class="nav-links">
-                <li class="active"><a href="#">DASHBOARD</a></li>
-                <li><a href="#">ATTENDANCE</a></li>
-                <li><a href="#">MARKS & GRADES</a></li>
-                <li><a href="#">FEES STRUCTURE</a></li>
-                <li><a href="#">PROFILES</a></li>
+                <li class="active"><a href="#" data-target="dashboard-view">DASHBOARD</a></li>
+                <li><a href="#" data-target="attendance-view">ATTENDANCE</a></li>
+                <li><a href="#"  data-target="marks-view">MARKS & GRADES</a></li>
+                <li><a href="#"  data-target="fee-view">FEES STRUCTURE</a></li>
+                <li><a href="#"  data-target="profile-view">PROFILES</a></li>
             </UL>
          </aside>
          
@@ -70,11 +73,20 @@
          <main class="main-content">
             <!-- TOP HAEDER BAR -->
              <header class="top-header">
-                <h3>Welcome, <span id="student-name">Student</span>!</h3>
-                <button id="logout-btn" class="btn-logout">LOGOUT</button>
-             </header>
+                <div class="header-left">
+                    <h3>Welcome, <span id="student-name">Student</span>!</h3>
+                    <span style="font-size: 13px; color: #666; font-style: italic; font-weight: 500;">
+                        "It's not that I'm so smart, It's just that I stay with problems longer."
+                        -----Albert Einstein
+                    </span>
+                </div>
+                <div class="header-right">
+                    <button id="logout-btn" class="btn-logout">LOGOUT</button>
+                </div>
+            </header>
             <!-- STATS CARD CONTAINER -->
-             <div class="dashboar-cards">
+             <div id="dashboard-view" class="content-section">
+             <div class="dashboard-cards">
                 <div class="card">
                     <h4>ATTENDANCE</h4>
                     <p class="stat">85%</p>
@@ -85,9 +97,55 @@
                 </div>
                 <div class="card">
                     <h4>PENDING FEE</h4>
-                    <p class="card">&#8377;0</p>
+                    <p class="stat">₹0</p>
                 </div>
              </div>
+             </div>
+
+             <!-- ATTENDANCE LEFT LIST -->
+
+             <div id="attendance-view" class="content-section hidden">
+                <h2>ATTENDANCE RECORD 2026</h2>
+                <div class="attendance-card">
+                    <div class="sub-section">
+                        <div class="card">
+                            <h4>TOTAL WORKING DAYS</h4>
+                            <P class="stat">45</P>
+                        </div>
+                        <div class="card">
+                            <h4>TOTAL DAYS ATTENDED</h4>
+                            <p class="stat">30</p>
+                        </div>
+                        <div class="card">
+                            <h4>TOTAL ATTENDANCE</h4>
+                            <p class="stat">66.6%</p>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Lecture 1</th>
+                            <th>Lecture 2</th>
+                            <th>Lecture 3</th>
+                            <th>Lecture 4</th>
+                            <th>LAB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20/04/2026</td>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>A</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+             
          </main> 
     </section>
     <!-- FACULTY DASHBOARD VIEW -->

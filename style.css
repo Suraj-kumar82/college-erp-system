@@ -2,7 +2,7 @@
     --bg-main: #0a1128;
     --bg-card: #1c2541;
     --input-card:#0a1128;
-    -accent:#d4af37;
+    --accent:#d4af37;
     --accent-hovar:#b89628;
     --text-primary: #ffffff;
     --text-secondary: #8d99ae;
@@ -166,6 +166,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
+    color: #0a1128; /* added: make header text visible on white bg */
     padding: 15px 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0,0,0.05);
@@ -178,7 +179,7 @@ body{
     padding: 8px 16px;
     cursor: pointer;
 }
-.dashboar-cards{
+.dashboard-cards{
     display: flex;
     gap:20px;
 }
@@ -188,6 +189,7 @@ body{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0,0,0.05);
+    color: #0a1128;
 }
 .card h4{
     margin: 0 0 10px 0;
@@ -199,4 +201,59 @@ body{
     font-weight: bold;
     color: #0f172a;
     margin: 0;
+}
+#attendance-view{
+    margin-top: 10px;
+}
+#attendance-view h2{
+    color: #2c3350;
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #1a437b;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+#attendance-view table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0,0,0.05);
+    margin-top: 20px;
+}
+#attendance-view thead{
+    background-color: #1e293b;
+    color: #ffffff;
+}
+#attendance-view th,
+#attendance-view td{
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+#attendance-view th{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+#attendance-view td{
+    color: #0a1128;
+    font-size: 15px;
+}
+#attendance-view tbody tr:hover{
+    background-color: #f8fafc;
+    transition: background-color 0.2s ease;
+}
+.header-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1; /* added so left block takes remaining space and push logout to right */
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
 }

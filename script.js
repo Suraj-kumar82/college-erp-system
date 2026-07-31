@@ -5,8 +5,9 @@ const authsection = document.querySelector("#auth-section");
 const studentdashboard = document.getElementById("student-dashboard");
 const facultydashboard = document.getElementById("faculty-dashboard");
 const admindashboard = document.getElementById("admin-dashboard");
-
 const logoutbtn = document.querySelector(".btn-logout");
+const nav_links = document.querySelectorAll(".nav-links a");
+const contentsection = document.querySelectorAll(".content-section");
 
 loginform.addEventListener("submit",(e)=>{
     e.preventDefault();
@@ -17,6 +18,7 @@ loginform.addEventListener("submit",(e)=>{
   if(email.includes("student") && password==="123456"){
     authsection.classList.add("hidden");
     studentdashboard.classList.remove("hidden");
+    document.getElementById("dashboard-view");
   }else if(email.includes("admin") && password==="123456"){
     authsection.classList.add("hidden");
     admindashboard.classList.remove("hidden");
@@ -36,3 +38,18 @@ if(logoutbtn){
         authsection.classList.remove("hidden");
     })
 }
+nav_links.forEach(link =>{
+  link.addEventListener("click",(e)=>{
+    e.preventDefault();
+    nav_links.forEach(l=> l.parentElement.classList.remove("active"));
+    link.parentElement.classList.add("active");
+    contentsection.forEach(section =>{
+      section.classList.add("hidden");
+    });
+    const targetId = link.getAttribute("data-target");
+    const targetsection=document.getElementById(targetId);
+    if(targetsection){
+      targetsection.classList.remove("hidden");
+    }
+  });
+});
