@@ -6,6 +6,7 @@ const studentdashboard = document.getElementById("student-dashboard");
 const facultydashboard = document.getElementById("faculty-dashboard");
 const admindashboard = document.getElementById("admin-dashboard");
 const logoutbtn = document.querySelector(".btn-logout");
+const profileBtn = document.getElementById("profile-btn");
 const nav_links = document.querySelectorAll(".nav-links a");
 const contentsection = document.querySelectorAll(".content-section");
 
@@ -53,3 +54,12 @@ nav_links.forEach(link =>{
     }
   });
 });
+
+if(profileBtn){
+  profileBtn.addEventListener("click",()=>{
+    nav_links.forEach(l=> l.parentElement.classList.remove("active"));
+    contentsection.forEach(section => section.classList.add("hidden"));
+    const targetsection=document.getElementById("profile-view");
+    if(targetsection) targetsection.classList.remove("hidden");
+  });
+}
