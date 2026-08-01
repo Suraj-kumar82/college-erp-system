@@ -196,7 +196,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    color: #0a1128; /* added: make header text visible on white bg */
+    color: #0a1128; 
     padding: 15px 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0,0,0.05);
